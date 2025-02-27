@@ -1,0 +1,56 @@
+/* Training Page Styles */
+
+.training-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.training-container h2 {
+  color: #5c4033;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.training-section {
+  margin-bottom: 30px;
+}
+
+.training-section h3 {
+  color: #4a3225;
+  margin-bottom: 10px;
+}
+
+.training-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.training-schedule {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.training-schedule a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #5c4033;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.training-schedule a:hover {
+  background: #4a3225;
+}
+
+@media (max-width: 768px) {
+  .training-container {
+    padding: 15px;
+  }
+}

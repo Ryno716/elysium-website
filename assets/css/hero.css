@@ -1,11 +1,13 @@
 /* Hero Section Styles */
 .hero {
+  width: 60vw; /* Full viewport width */
+  min-height: 70vh; /* Full screen height */
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Make hero section fill the screen */
   background: url("../images/hero-bg.jpg") center/cover no-repeat;
-  background-size: cover; /* Ensures it fills the space proportionally */
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
   padding: 20px;
@@ -27,6 +29,14 @@
   position: relative;
   z-index: 2;
   max-width: 800px;
+  padding: 20px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: Adds a slight background to make text readable */
+  border-radius: 5px;
 }
 
 .hero h2 {

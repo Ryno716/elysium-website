@@ -3,8 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  min-height: 100vh; /* Make hero section fill the screen */
   background: url("../images/hero-bg.jpg") center/cover no-repeat;
+  background-size: cover; /* Ensures it fills the space proportionally */
   color: white;
   text-align: center;
   padding: 20px;
@@ -18,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay for better readability */
   z-index: 1;
 }
 

@@ -13,6 +13,7 @@ body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  padding-top: 70px;
 }
 
 /* Header */
@@ -23,27 +24,69 @@ header {
   text-align: center;
 }
 
+/* Navbar Styles */
+nav {
+  background: rgba(92, 64, 51, 0.9); /* Slight transparency */
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Changed from sticky to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Center Navbar Items */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  background: #4a3225;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  display: inline-block;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: white;
+  font-size: 1.1em;
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-  color: #f4a261;
+/* Hover & Active Link Effects */
+nav ul li a:hover,
+nav ul li a.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+/* Sticky Navbar Effect When Scrolling */
+nav.scrolled {
+  background: rgba(74, 50, 37, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Navbar Styling */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 /* Main Content */

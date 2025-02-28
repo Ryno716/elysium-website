@@ -2,8 +2,8 @@
 .hero {
   width: 100vw; /* Full screen width */
   aspect-ratio: 16 / 9; /* Adjust ratio based on the image */
-  height: auto; /* Allows it to scale naturally */
-  min-height: 50vh; /* Keeps it visible on all screens */
+  height: 65vh; /* Allows it to scale naturally */
+  min-height: 80vh; /* Keeps it visible on all screens */
   margin: 0 auto; /* Ensures it's centered */
   display: flex;
   align-items: flex-start;

@@ -1,56 +1,12 @@
-# Elysium Equine Ltd. Website
+# React + Vite
 
-## Overview
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Elysium Equine Ltd. is a premier equestrian boarding and training facility. This static website serves as an information hub for clients, providing details on training services, scheduling, and facility information.
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Home Page
-- Training & Scheduling Page
-- Socials Page
-- About Page
-- Contact & FAQ Page
+## Expanding the ESLint configuration
 
-## File Structure
-
-```
-Elysium-Equine/
-│── index.html          # Home Page
-│── about.html          # About Page
-│── training.html       # Trainer & Training Page
-│── socials.html        # Socials Page
-│── contact.html        # Contact & FAQ Page
-│── assets/
-│   ├── css/
-│   │   ├── style.css   # Main Stylesheet
-│   ├── js/
-│   │   ├── script.js   # JavaScript (if needed)
-│   ├── images/         # Images & Icons
-│── calendar/           # (Optional) Directory for embedded scheduling tools
-```
-
-## Setup & Usage
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/Ryno716/elysium-website.git
-   ```
-2. Open the `index.html` file in a web browser.
-3. Modify `style.css` for custom styling.
-
-## Deployment
-
-This project is hosted on GitHub Pages or Netlify (TBD). Stay tuned for the deployment link.
-
-## Contributing
-
-Feel free to fork this repository and submit pull requests with improvements.
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-© 2025 Elysium Equine Ltd. All rights reserved.
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

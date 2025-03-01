@@ -1,56 +1,65 @@
-/* Training Page Styles */
-
+/* Training Page Styling */
 .training-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 900px;
+  margin: 50px auto;
   background: white;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.training-container h2 {
+/* Main Heading */
+.training-container h1 {
+  font-size: 2.5em;
   color: #5c4033;
-  text-align: center;
   margin-bottom: 20px;
 }
 
-.training-section {
-  margin-bottom: 30px;
+/* Lesson Types */
+.lesson-list {
+  text-align: left;
+  padding: 20px;
+  margin: 0 auto;
+  list-style: none;
+  max-width: 600px;
 }
 
-.training-section h3 {
-  color: #4a3225;
-  margin-bottom: 10px;
+.lesson-list li {
+  font-size: 1.2em;
+  padding: 10px;
+  background: #f4f4f4;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-.training-section p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #333;
+.lesson-list li:hover {
+  background: #d4a373;
+  color: white;
+  cursor: pointer;
 }
 
-.training-schedule {
-  text-align: center;
+/* Booking Section */
+.training-booking {
   margin-top: 20px;
-}
-
-.training-schedule a {
-  display: inline-block;
-  padding: 10px 20px;
+  padding: 15px;
   background: #5c4033;
   color: white;
+  border-radius: 5px;
+}
+
+.training-booking a {
+  display: inline-block;
+  background: #f4a261;
+  color: white;
+  padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
 }
 
-.training-schedule a:hover {
-  background: #4a3225;
-}
-
-@media (max-width: 768px) {
-  .training-container {
-    padding: 15px;
-  }
+.training-booking a:hover {
+  background: #e76f51;
 }

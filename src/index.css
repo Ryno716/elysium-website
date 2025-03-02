@@ -73,3 +73,43 @@ a:hover {
 .swiper-pagination-bullet-active {
   background: #8b5e3b !important;
 }
+.text-gradient {
+  background: linear-gradient(90deg, #3e2f25, #a67c52);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-glow:hover {
+  box-shadow: 0px 4px 12px rgba(199, 155, 83, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.section-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3e2f25, #a67c52);
+  margin: 40px 0;
+}
+.trainer-img {
+  width: 120px; /* Ensures correct size */
+  height: 120px;
+  object-fit: cover; /* Keeps images from stretching */
+  border-radius: 50%; /* Ensures circular shape */
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .trainer-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.trainer-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 12px rgba(199, 155, 83, 0.6);
+}

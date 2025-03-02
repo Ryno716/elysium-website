@@ -14,22 +14,30 @@ function About() {
         backgroundImage: "url('/about-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: "rgba(249, 250, 230, 0.27)", // Subtle tint
         backgroundBlendMode: "overlay",
-        backgroundColor: "rgba(248, 241, 229, 0.85)", // Subtle tint
+        backgroundAttachment: "fixed",
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="max-w-3xl text-center"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        className="bg-white/70 p-4 rounded-lg shadow-md max-w-3xl text-center"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
       >
-        <h1 className="text-6xl font-extrabold text-[#8b5e3b] mb-6 gold-outline">
-          About Elysium Equine
-        </h1>
+        <div className="bg-white/70 p-4 rounded-lg shadow-md max-w-3xl text-center">
+          <h1 className="text-6xl font-extrabold text-gradient mb-4 text-shadow">
+            About Elysium Equine
+          </h1>
+          <p className="text-xl text-[#4a3b30] leading-relaxed">
+            Elysium Equine Ltd. is a premier equestrian boarding and training
+            facility...
+          </p>
+        </div>
 
         <motion.p
           className="text-xl text-[#5c3d2e] mb-6 leading-relaxed text-shadow"
@@ -47,11 +55,7 @@ function About() {
         <motion.img
           src="/about-stable.jpg"
           alt="Elysium Equine Stable"
-          className="rounded-lg shadow-lg border-4 border-[#8b5e3b] w-full max-w-lg lg:max-w-3xl mb-8"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          className="rounded-lg shadow-lg border-4 border-[#8b5e3b] w-full max-w-lg lg:max-w-3xl mb-8 hover-scale hover-glow"
         />
 
         {/* Interactive Timeline Section */}
@@ -65,6 +69,8 @@ function About() {
           <h2 className="text-4xl font-bold text-[#8b5e3b] mb-4">
             Our Journey
           </h2>
+          <div className="section-divider"></div>
+
           <div className="timeline">
             <motion.div className="timeline-item" whileHover={{ scale: 1.05 }}>
               <div className="timeline-dot"></div>
@@ -101,10 +107,11 @@ function About() {
           </div>
         </motion.div>
         <motion.div
-          className="mt-16 fade-in"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-[#8b5e3b] mb-6 text-center">
             Meet Our Trainers
@@ -119,8 +126,9 @@ function About() {
                 <img
                   src={trainer.image}
                   alt={trainer.name}
-                  className="rounded-full w-32 h-32 mx-auto mb-4 border-4 border-[#c79b53]"
+                  className="trainer-img border-4 border-[#c79b53] mx-auto"
                 />
+
                 <h3 className="text-2xl font-semibold">{trainer.name}</h3>
                 <p className="text-lg text-[#5c3d2e]">{trainer.role}</p>
               </motion.div>

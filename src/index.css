@@ -94,15 +94,22 @@ a:hover {
   margin: 40px 0;
 }
 .trainer-img {
-  width: 120px; /* Ensures correct size */
-  height: 120px;
-  object-fit: cover; /* Keeps images from stretching */
-  border-radius: 50%; /* Ensures circular shape */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
   display: block;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
+  .trainer-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
   .trainer-img {
     width: 140px;
     height: 140px;

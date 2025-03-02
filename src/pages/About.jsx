@@ -107,26 +107,26 @@ function About() {
           </div>
         </motion.div>
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center"
+          className="text-center mt-16"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-[#8b5e3b] mb-6 text-center">
+          <h2 className="text-4xl font-bold text-[#8b5e3b] mb-6">
             Meet Our Trainers
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
             {trainers.map((trainer, index) => (
               <motion.div
                 key={index}
-                className="bg-[#fffaf0] shadow-xl rounded-lg p-6 text-center hover:scale-105 transition transform duration-300"
+                className="bg-[#fffaf0] shadow-xl rounded-lg p-6 text-center w-full max-w-[250px] mx-auto hover:scale-105 transition transform duration-300"
                 whileHover={{ scale: 1.05 }}
               >
                 <img
                   src={trainer.image}
                   alt={trainer.name}
-                  className="trainer-img border-4 border-[#c79b53] mx-auto"
+                  className="trainer-img border-2 border-[#c79b53] mx-auto"
                 />
 
                 <h3 className="text-2xl font-semibold">{trainer.name}</h3>

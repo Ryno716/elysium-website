@@ -1,24 +1,22 @@
 const testimonials = [
   {
-    name: "Jessica Thompson",
-    role: "Show Jumper",
-    image: "/testimonial1.jpg",
+    name: "Emily R.",
     feedback:
-      "Elysium Equine has completely transformed my riding skills! The training programs are tailored to each rider, and the trainers are incredibly supportive.",
+      "Elysium Equine has transformed my riding experience! The trainers are phenomenal.",
   },
   {
-    name: "Michael Reynolds",
-    role: "Dressage Competitor",
-    image: "/testimonial2.jpg",
+    name: "James P.",
     feedback:
-      "My horse has never been happier! The facilities are top-notch, and the care they provide is simply outstanding.",
+      "The best equestrian facility I've ever been to. Highly recommend!",
   },
   {
-    name: "Samantha Lee",
-    role: "Equestrian Enthusiast",
-    image: "/testimonial3.jpg",
+    name: "Sophia M.",
     feedback:
-      "The atmosphere here is amazing. Everyone is friendly, and I’ve made so much progress thanks to their incredible team!",
+      "My horse has never been happier. The care and training here are unmatched.",
+  },
+  {
+    name: "Daniel K.",
+    feedback: "Professional, welcoming, and truly passionate about horses.",
   },
 ];
 

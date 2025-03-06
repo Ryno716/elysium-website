@@ -5,7 +5,7 @@ function Socials() {
     <div
       className="min-h-screen flex flex-col items-center py-12 px-6"
       style={{
-        backgroundImage: "url('src/images/socials-bg.jpg')",
+        backgroundImage: "url('/images/socials-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",

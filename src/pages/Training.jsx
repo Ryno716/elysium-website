@@ -5,7 +5,7 @@ function Training() {
     <div
       className="min-h-screen flex flex-col items-center py-12 px-6"
       style={{
-        backgroundImage: "url('src/images/training-bg.jpg')",
+        backgroundImage: "url('/images/training-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
@@ -72,9 +72,8 @@ function Training() {
         </div>
 
         <img
-          src="/training-session.jpg"
+          src="/images/training-session.jpg"
           alt="Training session at Elysium Equine"
-          className="rounded-lg shadow-lg mt-10 w-full md:w-2/3 mx-auto border-2 border-[#c79b53]"
         />
 
         {/* Booking Button */}

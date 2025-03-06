@@ -2,7 +2,6 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Carousel from "../components/Carousel";
-import texture from "../assets/texture-overlay.png";
 
 function Home() {
   return (
@@ -14,7 +13,7 @@ function Home() {
       <div
         className="p-10"
         style={{
-          backgroundImage: `url(${texture})`,
+          backgroundImage: "url('/images/texture-overlay.png')",
           backgroundSize: "cover",
           backgroundBlendMode: "overlay",
         }}

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "copy _redirects dist\\",
+    "postbuild": "cp _redirects dist/ || copy _redirects dist\\",
     "lint": "eslint .",
     "preview": "vite preview"
   },

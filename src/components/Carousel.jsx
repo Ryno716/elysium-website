@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 
 const images = [
   {
-    src: "src/assets/carousel-stableview.jpg",
+    src: "/assets/carousel-stableview.jpg",
     alt: "Stable Interior",
-    text: "Luxury Stables",
+    text: "Luxury Stables.",
   },
   {
-    src: "src/assets/carousel-training.jpg",
+    src: "/assets/carousel-training.jpg",
     alt: "Training Arena",
     text: "Top-Tier Training",
   },
   {
-    src: "src/assets/carousel-farmview.jpg",
+    src: "/assets/carousel-farmview.jpg",
     alt: "Equestrian Fields",
-    text: "Scenic Riding Trails",
+    text: "Scenic Riding Trails.",
   },
 ];
 

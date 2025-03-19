@@ -1,109 +1,76 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import FloatingNav from "../components/FloatingNav";
 
 function Contact() {
   return (
     <motion.div
-      className="min-h-screen flex flex-col items-center py-12 px-6"
+      className="min-h-screen flex flex-col items-center justify-center py-12 px-6 bg-[#121212] text-white"
       style={{
         backgroundImage: "url('/images/contact-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundBlendMode: "overlay",
-        backgroundColor: "rgba(245, 245, 245, 0.17)", // Subtle overlay tint
       }}
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
-      {/* Page Title */}
-      <h1 className="text-4xl font-bold text-[#827628fb] mb-6 text-center">
-        Get in Touch
-      </h1>
+      {/* ✅ Contact Title */}
+      <motion.div
+        className="max-w-3xl w-full bg-[#1e1e1e] border-2 border-[#c79b53] shadow-xl rounded-xl p-8 text-white text-center"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-5xl font-extrabold text-[#c79b53] mb-6">
+          Get in Touch
+        </h1>
+        <p className="text-lg text-gray-300">
+          Have questions? We'd love to hear from you!
+        </p>
 
-      {/* Contact Form */}
-      <div className="bg-[#ffffff00] shadow-lg rounded-lg p-8 w-full max-w-lg">
-        <form className="space-y-6">
-          <div>
-            <label className="block text-[#0c0908] font-semibold">Name</label>
-            <input
-              type="text"
-              className="w-full mt-2 p-3 rounded-lg border border-[#c79b53] bg-[#292929] text-white focus:ring focus:ring-[#6a0dad] outline-none"
-              placeholder="name"
-            />
-          </div>
-
-          <div>
-            <label className="block text-[#090909] font-semibold">Email</label>
-            <input
-              type="email"
-              className="w-full mt-2 p-3 rounded-lg border border-[#c79b53] bg-[#292929] text-white focus:ring focus:ring-[#6a0dad] outline-none"
-              placeholder="Your Email"
-            />
-          </div>
-
-          <div>
-            <label className="block text-[#0b0a0a] font-semibold">
-              Message
-            </label>
-            <textarea
-              rows="4"
-              className="w-full mt-2 p-3 rounded-lg border border-[#c79b53] bg-[#292929] text-white focus:ring focus:ring-[#dac448] outline-none"
-              placeholder="Your Message"
-            ></textarea>
-          </div>
-
-          <motion.button
-            type="submit"
-            className="w-full bg-gradient-to-r from-[#a99235] to-[#000000] text-white font-semibold py-3 rounded-lg shadow-lg hover:from-[#b2844c] hover:to-[#dcd137] transition-all duration-300"
-          >
+        {/* ✅ Contact Form */}
+        <form className="mt-8 space-y-4">
+          <input
+            className="w-full p-3 border rounded-lg bg-black text-white placeholder-gray-400"
+            type="text"
+            placeholder="Your Name"
+          />
+          <input
+            className="w-full p-3 border rounded-lg bg-black text-white placeholder-gray-400"
+            type="email"
+            placeholder="Your Email"
+          />
+          <textarea
+            className="w-full p-3 border rounded-lg bg-black text-white placeholder-gray-400"
+            rows="4"
+            placeholder="Your Message"
+          ></textarea>
+          <button className="px-6 py-3 border-2 border-[#c79b53] bg-[#c79b53] text-black font-semibold rounded-lg shadow-md hover:bg-[#d9a868] transition duration-300">
             Send Message
-          </motion.button>
+          </button>
         </form>
-      </div>
-      {/* Refined Navigation Buttons */}
-      <div className="mt-12 flex flex-wrap justify-center gap-6">
-        <a
-          href="/"
-          className="px-6 py-3 border-2 border-[#020202] bg-[#aa9136] text-white font-semibold rounded-full shadow-md hover:bg-[#e6be3b] hover:border-[#8b5e3b] transition-all duration-300"
+      </motion.div>
+
+      {/* ✅ Navigation Buttons */}
+      <div className="mt-12 flex flex-wrap justify-center space-x-4">
+        <Link
+          to="/"
+          className="px-6 py-3 border-2 border-[#c79b53] bg-[#1e1e1e] text-[#c79b53] font-semibold rounded-lg shadow-md hover:bg-[#c79b53] hover:text-black transition duration-300"
         >
           Home
-        </a>
-        <a
-          href="/about"
-          className="px-6 py-3 border-2 border-[#020202] bg-[#97802f] text-white font-semibold rounded-full shadow-md hover:bg-[#e6be3b] hover:border-[#4a2f1f] transition-all duration-300"
+        </Link>
+        <Link
+          to="/about"
+          className="px-6 py-3 border-2 border-[#c79b53] bg-[#1e1e1e] text-[#c79b53] font-semibold rounded-lg shadow-md hover:bg-[#c79b53] hover:text-black transition duration-300"
         >
-          About Us
-        </a>
-        <a
-          href="/training"
-          className="px-6 py-3 border-2 border-[#020202] bg-[#715e1a] text-white font-semibold rounded-full shadow-md hover:bg-[#e6be3b] hover:border-[#8b5e3b] transition-all duration-300"
-        >
-          Training
-        </a>
-        <a
-          href="/socials"
-          className="px-6 py-3 border-2 border-[#020202] bg-[#41350c] text-white font-semibold rounded-full shadow-md hover:bg-[#e6be3b] hover:border-[#4a2f1f] transition-all duration-300"
-        >
-          Socials
-        </a>
+          About
+        </Link>
       </div>
 
-      {/* Contact Info */}
-      <div className="mt-12 text-center space-y-3">
-        <h2 className="text-2xl font-semibold text-black mb-4">
-          Contact Details
-        </h2>
-        <p className="flex items-center justify-center gap-2 text-rgb">
-          📍 Langley, British Columbia
-        </p>
-        <p className="flex items-center justify-center gap-2 text-black">
-          📞 (123) 456-7890
-        </p>
-        <p className="flex items-center justify-center gap-2 text-black">
-          ✉ info@elysiumequine.com
-        </p>
-      </div>
+      {/* ✅ Floating Navigation (Correct Placement) */}
+      <FloatingNav />
     </motion.div>
   );
 }

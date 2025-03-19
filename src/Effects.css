@@ -1,0 +1,19 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-effect {
+  transition: all 0.4s ease-in-out;
+}
+
+.grid-item:hover .grid-text {
+  opacity: 1;
+  animation: fadeInUp 0.4s ease-in-out forwards;
+}

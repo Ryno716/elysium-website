@@ -1,28 +1,70 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import PageTransition from "./components/PageTransition";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Training from "./pages/Training";
 import Socials from "./pages/Socials";
-import BeginnerTraining from "./pages/BeginnerTraining";
-import CompetitiveTraining from "./pages/CompetitiveTraining";
-import JumpingDressage from "./pages/JumpingDressage";
-import PrivateCoaching from "./pages/PrivateCoaching";
+import Facility from "./pages/Facility";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="min-h-screen">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/training" element={<Training />} />
-        <Route path="/socials" element={<Socials />} />
-        <Route path="/beginner-training" element={<BeginnerTraining />} />
-        <Route path="/competitive-training" element={<CompetitiveTraining />} />
-        <Route path="/jumping-dressage" element={<JumpingDressage />} />
-        <Route path="/private-coaching" element={<PrivateCoaching />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <PageTransition>
+                <Home />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/facility"
+            element={
+              <PageTransition>
+                <Facility />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <PageTransition>
+                <About />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <PageTransition>
+                <Contact />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/training"
+            element={
+              <PageTransition>
+                <Training />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/socials"
+            element={
+              <PageTransition>
+                <Socials />
+              </PageTransition>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

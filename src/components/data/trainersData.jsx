@@ -1,19 +1,16 @@
-const trainers = [
-  {
-    name: "Sarah Johnson",
-    role: "Head Trainer",
-    image: "/trainers/trainer1.jpg",
-  },
-  {
-    name: "Michael Brown",
-    role: "Jumping Specialist",
-    image: "/trainers/trainer2.jpg",
-  },
-  {
-    name: "Emily White",
-    role: "Dressage Coach",
-    image: "/trainers/trainer3.jpg",
-  },
-];
+import { useState, useEffect } from "react";
 
-export default trainers;
+function useFetchTrainers() {
+  const [trainers, setTrainers] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/trainers.json")
+      .then((response) => response.json())
+      .then((data) => setTrainers(data))
+      .catch((error) => console.error("Error fetching trainers:", error));
+  }, []);
+
+  return trainers;
+}
+
+export default useFetchTrainers;

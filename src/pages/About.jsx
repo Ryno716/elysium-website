@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import useFetchTrainers from "../components/data/trainersData.jsx";
 import testimonials from "../components/data/testimonialsData";
-import FloatingNav from "../components/FloatingNav"; // ✅ Correctly Imported
+import FloatingNav from "../components/FloatingNav";
 
 // ✅ Full-Page Carousel Background Images
 const carouselImages = [
@@ -73,11 +73,6 @@ function About() {
                 alt={item.caption}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <h2 className="text-5xl font-bold text-white drop-shadow-md">
-                  {item.caption}
-                </h2>
-              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -85,7 +80,7 @@ function About() {
 
       {/* ✅ Floating Testimonials */}
       <div className="absolute top-1/4 w-full flex justify-center space-x-8 z-20">
-        {visibleTestimonials.map((testimonial, index) => (
+        {visibleTestimonials.map((testimonial) => (
           <motion.div
             key={testimonial.id}
             className="bg-[#292929] text-white border-2 border-[#c79b53] shadow-md rounded-xl px-6 py-4 text-center w-64 opacity-90"
@@ -115,7 +110,7 @@ function About() {
         </p>
       </div>
 
-      {/* ✅ Floating Navigation (Corrected Placement) */}
+      {/* ✅ Floating Navigation */}
       <FloatingNav />
     </motion.div>
   );

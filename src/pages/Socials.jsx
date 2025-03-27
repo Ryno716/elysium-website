@@ -1,90 +1,94 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { motion } from "framer-motion";
+import FloatingNav from "../components/FloatingNav";
 
 function Socials() {
   return (
     <div
-      className="min-h-screen flex flex-col items-center py-12 px-6"
+      className="min-h-screen flex items-center justify-center px-6 py-20 bg-[#121212] text-white relative"
       style={{
         backgroundImage: "url('/images/socials-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundBlendMode: "overlay",
-        backgroundColor: "rgba(18, 18, 18, 0.95)", // Black with subtle overlay
+        backgroundColor: "rgba(0,0,0,0.85)",
       }}
     >
-      <div className="max-w-3xl w-full bg-[#1e1e1e] border-2 border-[#c79b53] shadow-xl rounded-xl p-8 text-white text-center">
-        <h1 className="text-5xl font-extrabold text-[#8b5e3b] mb-6">
-          Follow Us on Social Media
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="w-full max-w-3xl rounded-xl border border-[#c79b53] bg-[#1e1e1ecc] backdrop-blur-md shadow-xl px-8 py-12 text-center"
+      >
+        <h1 className="text-5xl font-extrabold text-[#c79b53] mb-4 drop-shadow-md">
+          Connect With Us
         </h1>
-        <p className="text-lg mb-6">
-          Stay updated with the latest news, events, and training sessions at
-          Elysium Equine Ltd. Follow us on social media!
+        <p className="text-lg text-gray-300 mb-10">
+          Follow Elysium Equine on your favorite platforms for training reels,
+          farm updates, and behind-the-scenes content.
         </p>
 
-        {/* Social Media Links */}
-        <div className="flex flex-wrap justify-center gap-4">
+        {/* Social Media Icons */}
+        <div className="flex justify-center gap-6 mb-2 flex-wrap">
           {/* Facebook */}
-          <a
+          <motion.a
             href="https://facebook.com/elysiumequine"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-[#1877F2] text-white font-semibold rounded-full shadow-md hover:bg-[#145dbf] transition-all duration-300"
+            whileHover={{ scale: 1.1 }}
+            className="text-[#1877F2] text-4xl hover:drop-shadow-[0_0_8px_#1877F2] transition"
           >
-            <i className="fab fa-facebook-f"></i>
-            <span>Facebook</span>
-          </a>
+            <i className="fab fa-facebook-square"></i>
+          </motion.a>
 
           {/* Instagram */}
-          <a
+          <motion.a
             href="https://instagram.com/elysiumequine"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#E1306C] to-[#F56040] text-white font-semibold rounded-full shadow-md hover:from-[#C32AA3] hover:to-[#F77737] transition-all duration-300"
+            whileHover={{ scale: 1.1 }}
+            className="text-pink-500 text-4xl hover:drop-shadow-[0_0_8px_#E1306C] transition"
           >
             <i className="fab fa-instagram"></i>
-            <span>Instagram</span>
-          </a>
+          </motion.a>
 
-          {/* Twitter (X) */}
-          <a
-            href="https://twitter.com/elysiumequine"
+          {/* TikTok */}
+          <motion.a
+            href="https://www.tiktok.com/@elysiumequine"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-black text-white font-semibold rounded-full shadow-md hover:bg-[#1d1d1d] transition-all duration-300"
+            whileHover={{ scale: 1.1 }}
+            className="text-white text-4xl hover:drop-shadow-[0_0_8px_white] transition"
           >
-            <i className="fab fa-x-twitter"></i>
-            <span>Twitter</span>
+            <i className="fab fa-tiktok"></i>
+          </motion.a>
+        </div>
+        {/* Contact Buttons */}
+        <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
+          {/* Email */}
+          <a
+            href="mailto:contact@elysiumequine.ca"
+            className="px-6 py-2 border-2 border-[#c79b53] text-[#c79b53] bg-black font-medium rounded-full hover:bg-[#c79b53] hover:text-black transition duration-300"
+          >
+            Email Us
+          </a>
+
+          {/* Phone */}
+          <a
+            href="tel:+16045551234"
+            className="px-6 py-2 border-2 border-[#c79b53] text-[#c79b53] bg-black font-medium rounded-full hover:bg-[#c79b53] hover:text-black transition duration-300"
+          >
+            Call Us
           </a>
         </div>
 
-        {/* Navigation Buttons */}
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href="/"
-            className="flex items-center space-x-2 px-6 py-3 border-2 border-[#c79b53] bg-black text-[#c79b53] font-semibold rounded-full shadow-md hover:bg-[#c79b53] hover:text-black transition-all duration-300"
-          >
-            Home
-          </a>
-          <a
-            href="/about"
-            className="flex items-center space-x-2 px-6 py-3 border-2 border-[#c79b53] bg-black text-[#c79b53] font-semibold rounded-full shadow-md hover:bg-[#c79b53] hover:text-black transition-all duration-300"
-          >
-            About
-          </a>
-          <a
-            href="/training"
-            className="flex items-center space-x-2 px-6 py-3 border-2 border-[#c79b53] bg-black text-[#c79b53] font-semibold rounded-full shadow-md hover:bg-[#c79b53] hover:text-black transition-all duration-300"
-          >
-            Training
-          </a>
-          <a
-            href="/contact"
-            className="flex items-center space-x-2 px-6 py-3 border-2 border-[#c79b53] bg-black text-[#c79b53] font-semibold rounded-full shadow-md hover:bg-[#c79b53] hover:text-black transition-all duration-300"
-          >
-            Contact
-          </a>
-        </div>
-      </div>
+        <p className="text-sm text-gray-500 mt-6">
+          📲 Tag us @elysiumequine — we’d love to feature your moments!
+        </p>
+      </motion.div>
+
+      {/* Floating Navigation */}
+      <FloatingNav />
     </div>
   );
 }
